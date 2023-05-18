@@ -23,8 +23,8 @@ export default function RandomImagesPage() {
             <div className={`
             flex justify-center items-center flex-wrap gap-5 p-7
             `}>
-                {searchs.map((search) => (
-                <RandomImages text={search} searchs={searchs} setSearchs={setSearchs}/>
+                {searchs.map((search, key) => (
+                <RandomImages text={search} key={key} searchs={searchs} setSearchs={setSearchs}/>
                 ))}
 
             {(showAddImage || (searchs.length == 0)) ? (<AddImage searchs={searchs} setSearchs={setSearchs} setShowAddImage={setShowAddImage}/>) : (<AddButton onClick={handleAddButtonClick} />)}
